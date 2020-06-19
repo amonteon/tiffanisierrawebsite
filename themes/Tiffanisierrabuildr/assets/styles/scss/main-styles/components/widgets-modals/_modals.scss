@@ -1,0 +1,150 @@
+
+//------------> Hello Bar Styles <-------------//
+
+.top-hello-bar{
+	top: 0;
+    width: 100%;
+    background-color: inherit;
+    padding: 0;
+    border: none;
+}
+#hello-bar {
+	top: 0 !important;
+    border: none;
+    width: 100%;
+	text-align: center;
+	overflow: visible;
+	right: 0;		
+    justify-content: center;
+    align-items: center; 
+	left: auto !important;
+	//display: flex;
+	.reveal-container {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		padding: 1.5rem 1rem;
+		box-shadow: 0 -3px 6px rgba(0,0,0,.16);
+		p {
+			margin-bottom: 0;
+			line-height: 1.5;
+			font-size: 18px;
+			font-weight: 100;
+			margin-top: 1rem;
+			@include breakpoint(xmedium){ margin-right: 100px;}
+			a {
+				color: black;
+				text-decoration: underline;
+				font-weight: bold;
+				font-size: 18px;
+
+				//color:$primary-color;
+				-webkit-transform: perspective(1px) translateZ(0);
+			    transform: perspective(1px) translateZ(0);
+			    display: inline-block;
+			  //  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+			    position: relative;
+			    -webkit-transition-property: color;
+			    transition-property: color;
+			    -webkit-transition-duration: 0.3s;
+			    transition-duration: 0.3s;
+			    text-decoration: underline;
+				&:before{
+					content: "";
+				    position: absolute;
+				    z-index: -1;
+				    top: 0;
+				    left: 0;
+				    right: 0;
+				    bottom: 0;
+				    background: $primary-color;
+				    -webkit-transform: scaleX(0);
+				    transform: scaleX(0);
+				    -webkit-transform-origin: 0 50%;
+				    transform-origin: 0 50%;
+				    -webkit-transition-property: transform;
+				    transition-property: transform;
+				    -webkit-transition-duration: 0.3s;
+				    transition-duration: 0.3s;
+				    -webkit-transition-timing-function: ease-out;
+				    transition-timing-function: ease-out;
+				}
+				&:hover, 
+				&:focus{
+					color: white;
+					//padding: .3rem;
+					//background: $primary-color;
+					font-weight: normal;
+					&:before{
+						-webkit-transform: scaleX(1);
+						transform: scaleX(1);
+					}
+				}
+
+			}
+			@include breakpoint(smedium down) {
+				font-size: 14px;
+			}
+		}
+	}
+	.close-button {
+		//height: 25px;
+		//width: 25px;
+		//position: relative;
+		top: auto;
+		right: 2rem;
+		color: $primary-color;
+		background: linear-gradient(135deg, #FC48BD,#8D9AC6,#26E6CF );
+		border: none;
+		padding: 1rem 2.5rem;
+		@include breakpoint(medium down){ position: relative;}
+		span {
+			//color: inherit !important;
+			background-color: transparent;
+			border:none;
+			//border-radius: 20px;
+			//height: 25px;
+			//width: 25px;
+			line-height: 1.2;
+			font-weight: 900;
+			display: block;
+			font-size: 14px;
+			color: white !important;
+			
+
+		}
+		&:hover, 
+		&:focus{
+			span{
+				i{
+					font-weight: 900;
+				}
+			}
+		}
+	}
+}
+
+//------------> Floating Contact Button Styles <-------------//
+
+
+
+.reveal-overlay{
+	animation-name: fadeOut;
+	animation-duration: .5s;
+	background-color: rgba(white, .8);
+	overflow: scroll;
+}
+
+
+.is-reveal-open{
+	.reveal-overlay{
+		animation-name: fadeIn;
+		animation-duration: .5s;
+		background-color: rgba(white, .8);
+		overflow: scroll;
+	}
+	.floating-contact-form{
+		animation-name: slideInUp;
+		animation-duration: .5s;
+	}
+}

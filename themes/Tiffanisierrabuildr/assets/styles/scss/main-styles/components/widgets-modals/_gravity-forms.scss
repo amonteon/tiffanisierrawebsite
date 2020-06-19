@@ -1,0 +1,484 @@
+/*********************
+BREAKPOINT GUIDE
+*********************/
+/*
+@include breakpoint(small) { } // 0px - 419px	
+@include breakpoint(xsmall) { } // 0px - 419px	
+@include breakpoint(smedium) { } //	420px - 639px 
+@include breakpoint(medium) { } // 640px - 768px	
+@include breakpoint(xmedium) { } // 769px - 1024px	
+@include breakpoint(large) { }	// 1025px - 1199px
+@include breakpoint(xlarge) { }	// 1200px - 1439px
+@include breakpoint(xxlarge) { } // 1440px - beyond	
+*/
+
+// Makes Gravity Forms play nice with Foundation Form styles
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+form{
+	position: relative;
+}
+
+.floating-contact-form-wrapper{
+	.gform_wrapper{
+		form{
+			padding: 2rem;
+			.gfield.cell{
+				position: relative;
+			}
+			.gform_footer{
+				bottom: 2rem !important;
+			}
+		}
+	}
+}
+
+.full-width-contact-form-widget{
+	.contact-form-wrapper{
+		z-index: 1;
+		.gform_wrapper{
+			background: white !important;
+			padding: 3rem 5rem;
+			@include breakpoint(large) { padding: 3rem 5rem;} 
+		}
+	}
+}
+	.gform_wrapper{
+		z-index: 1;
+		background: white !important;
+		ul{
+			margin: auto !important;
+		}
+		li{
+			&:before{
+				display: none !important;
+			}
+			input[type="text"],
+			input[type="email"],
+			input[type="tel"],
+			textarea {
+				border-color: #707070;
+				background-color: white;		
+				box-shadow: none;	
+				min-height: 65px;	
+				margin-bottom: 1.5rem;
+				padding-top: 1.5rem;
+				border-radius: 5px;
+			}
+			select{
+				border-color: #707070;
+				background-color: white;		
+				box-shadow: none;	
+				min-height: 60px;	
+				margin-bottom: 1.5rem;
+				border-radius: 5px;
+			}
+			textarea{
+				max-height: 180px;
+				border-radius: 5px;
+			}
+		}
+		.gform_title{
+			padding: 2rem 0; 
+			margin-bottom: 0 !important;
+			text-align: left;
+			color: $medium-gray;
+		}
+		.gfield_label{
+			font-size: 14px;
+			color: rgba(#707070, .68);
+			font-weight: 100;
+			position: absolute;
+			padding: .3rem .5rem ;
+			transition: font-size .2s ease-in-out;
+			cursor: text;
+			&.highlight{
+				color: rgba($primary-color, .68);
+			}
+		}
+		#field_1_2{
+			.gfield_label{
+				padding: 0 0 1rem 0;
+				position: relative;
+			}
+		}
+		.gform_footer{
+			.gform_button{
+				width: 100%;
+				span{
+					font-size: 15px;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+			}		
+		}
+		#field_1_5,
+		#field_4_5{
+			width: 100%;
+			display: inline-block;
+			padding: .5rem 0 1rem 0;	
+			margin-left: 14px;
+			text-align: left;
+			@include breakpoint(medium){ width: 70%; }	
+			.gfield_label{
+				display: none;
+			}	
+			.gfield_description{
+				color: $primary-color;
+				font-size: 20px;
+				a{
+					color: $primary-color;
+					font-size: 20px;
+					text-decoration: underline;
+				}
+				&.validation_message{
+					color: #8D0000 !important;
+					font-size: 12px;
+					right: 0;
+					line-height: 1;
+					left: auto;
+					position: absolute;
+					bottom: 30px;
+					top: auto;
+					//@include breakpoint(medium){ right: auto; bottom: -10px; left: 60px;}
+				}
+			}
+		}
+		
+		.gfield_error{
+			.gfield_checkbox li input[type=checkbox] + label:after{
+				border: 2px solid #8D0000;
+			}
+			.gfield_checkbox{
+				label{
+					color: #8D0000 !important;
+				}
+				a.terms-of-use{
+					color: #8D0000 !important;
+				}
+			}
+			.gfield_label{
+				padding-right: 90px;
+			}
+		}
+		.gfield_checkbox li input[type=checkbox] + label{
+		    position: relative;
+		    cursor: pointer;
+		    display: inline-block !important;
+		    color: #707070;
+		    font-size: 15px;
+		    font-weight: 100;
+		}
+		
+		.gfield_checkbox{
+			vertical-align: middle;
+			a.terms-of-use{
+				letter-spacing: 0;
+				font-size: inherit;
+				font-weight: bold;
+				color: #707070 !important;
+			}
+		}
+
+		.ginput_container_checkbox,
+		.gfield_description {
+			width: auto;
+			display: inline-block !important;
+			margin-right: 8px;
+			a{
+				text-decoration: underline;
+			}
+			&.validation_message{
+				display: none;
+			}
+		}
+		.hidden_label {
+			.ginput_container {
+				.gfield_checkbox {
+					display: inline-block !important;
+					width: auto;
+					label {
+						//display: none !important;
+					}
+					li {
+						display: inline-block !important;
+						width: auto;				
+					}
+				}
+			}
+		}	
+}
+
+	.gform_wrapper {
+		float: none; 
+		clear: both;
+		&.gform_validation_error{
+			.validation_error,
+			.validation_message{
+				display: none;
+				position: absolute;
+				top: 0;
+				right: 0;
+				color: #8D0000;
+				font-size: 11px;
+				font-weight: 100;
+				margin-right: 18px;
+				&:before{
+					background-image:url('../../../images/exclamation-triangle-solid.svg');					
+					background-origin: content-box;
+					padding-right: 2.5em;
+					background-position: right -1.5em center;
+					background-repeat: no-repeat;
+					background-size: 15px;	
+					content: "";	
+				}
+			}
+			.gform_body{
+				.gfield{
+					&.gfield_contains_required{
+						.gfield_label{
+							//color: #8D0000;
+						}
+					}
+				}
+			}
+		}
+		.gform_body {
+			width:100%;
+			.ginput_container input, 
+			option.gf_placeholder, 
+			.ginput_container textarea {				
+				&::-webkit-input-placeholder { /* Chrome */ font-size: 14px; color: rgba(#707070, .68); font-weight: 100;}
+				&:-ms-input-placeholder { /* IE 10+ */  font-size: 14px; color: rgba(#707070, .68); font-weight: 100;	}
+				&::-moz-placeholder { /* Firefox 19+ */  font-size: 14px; color: rgba(#707070, .68); font-weight: 100; }
+				&:-moz-placeholder { /* Firefox 4 - 18 */  font-size: 14px; color: rgba(#707070, .68); font-weight: 100;}
+			}
+			.ginput_container select {
+				background-image: url('../../../images/arrow-down-light.svg');
+				background-size: 15px;
+				padding-right: 2.5rem;
+				font-size: 14px;
+				color: rgba(#707070, .68);
+				font-weight: 100;
+				option{
+					&.gf_placeholder{
+						margin-top: -10px;
+					}
+				}
+			}
+			.gfield_terms .gfield_description { color:white; a {  color:white; font-weight: 800; } }
+			.gfield.hidden_label label { display: none; }
+			.gfield.gform_validation_container { opacity:0; visibility: hidden; max-height: 0;  }
+			
+			.gfield {
+				input[type="textarea"]{
+					padding: 8px;
+				}
+				.typing {
+					input[type="text"],
+					input[type="email"],
+					input[type="tel"],
+					select, 
+					textarea   {
+						border-color:$primary-color;	
+						border-width: 2px;		
+						color: $medium-gray;	
+						font-weight: 100;	
+						box-shadow: 0px 3px 6px rgba(black, .16);	
+					}
+				}
+				.validated {
+					input[type="text"],
+					input[type="email"],
+					input[type="tel"],
+					select, 
+					textarea {				
+						color: rgba($medium-gray, .68);		
+						border-color: #707070;		
+						border-width: .5px;
+						box-shadow: none;
+						background-image:url('../../../images/check-light.svg');					
+						background-origin: content-box;
+						padding-right: 2.5em;
+						background-position: right -1.5em center;
+						background-repeat: no-repeat;
+						background-size: 15px;	
+						background-position-y: top;
+					}	
+					select{
+						background-position-y: center;
+					}				
+				}
+				&.gfield_error {					
+					input[type="text"],
+					input[type="email"],
+					input[type="tel"],
+					textarea {
+						border-color:#D60404;
+						border-width: .5px;
+							
+					}	
+					.typing{
+						input[type="text"],
+						input[type="email"],
+						input[type="tel"],
+						textarea{
+							color: #D60404;
+						}
+					}	
+					.gfield_label{
+						color: #8D0000;
+						&.validated{
+							color: $medium-gray !important;
+						}
+					}
+					.gfield_description{
+						&.validated{
+							display: none !important;
+						}
+					}
+					.validated{
+						input[type="text"],
+						input[type="email"],
+						input[type="tel"],
+						textarea,
+						select{
+							color: $medium-gray;
+							border-color: #707070;
+						}
+					}		
+				}
+				&.gfield_error {					
+					select{
+						border-color:#D60404;
+						border-width: .5px;
+									
+					}				
+				}
+			}	
+		}
+		.gform_footer { 
+			width:70%;
+			margin: auto;
+			@include breakpoint(medium){ width: 25%; }
+			[type=button], [type=submit] {
+				width: 100%;
+			}
+			.gform_button{
+				margin-bottom: 0 !important;
+				min-width: auto !important;
+				span{
+					font-weight: 100 !important;
+					font-size: 18px !important;
+					text-transform: none !important;
+				}	
+			}
+		}	
+
+		.gform_fields.grid-x.grid-padding-x {
+			margin-left: -$global-padding/2;
+			margin-right: -$global-padding/2;
+		}
+		.gfield.cell {
+			padding-left: $global-padding/2;
+			padding-right: $global-padding/2;
+		}
+		.gfield_checkbox {
+			label {
+				color: $white;
+			}
+		}
+		.ginput_container_checkbox,
+		.gfield_description {
+			width: auto;
+			display: inline-block;
+			margin-right: 8px;
+		}
+		.hidden_label {
+			.ginput_container {
+				.gfield_checkbox {
+					display: inline-block;
+					width: auto;
+					label {
+						display: none;
+					}
+					li {
+						display: inline-block;
+						width: auto;				
+					}
+				}
+			}
+		}
+	}
+
+
+.widget-contact-form {
+	.widget {
+		.gform_wrapper {
+			form {
+				.gform_body {
+					ul.gform_fields {
+						li.gfield {
+							&.gform_validation_container {
+								display: none;
+							}
+							.ginput_container.has-error {
+								input,select {
+									border-color: red;
+								}
+								.pseudo-container-error {
+									&:after {
+										content: '\f05c';
+										color: red;
+										font-family: 'FontAwesome';
+										font-size: inherit;
+										position: absolute;
+										top: 0;
+										right: 1.5rem;
+									}
+								}
+								select ~ .pseudo-container-error {
+									&:after {
+										right: 1.5rem;
+									}
+								}
+							}
+							.ginput_container.correct {
+								input, select {
+									border-color: green;
+								}
+								.pseudo-container-correct {
+									&:after {
+										content: '\f00c';
+										color: green;
+										font-family: 'FontAwesome';
+										font-size: inherit;
+										position: absolute;
+										top: 0;
+										right: 1.5rem;
+									}
+								}
+								select ~ .pseudo-container-correct {
+									&:after {
+										right: 1.5rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

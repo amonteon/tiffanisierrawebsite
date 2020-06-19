@@ -1,0 +1,108 @@
+#content.contact-content{
+	//padding-top: 130px;
+	padding-bottom: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	margin-bottom: 0 !important;
+	.flexible-field-1{
+		margin-bottom: 0;
+	}
+	.grid-container{
+		//max-width: 85rem;
+		.entry-content{
+			justify-content: space-between;
+		}
+	}
+	
+	.fullwidthVisual.address-form{
+		@include breakpoint(xmedium down){ margin: 3rem 0;}
+		@include breakpoint(large){ min-height: 600px; position: relative;}
+
+	}
+	.contact-grid-container{
+		position: relative;
+		@include breakpoint(medium down){ padding: 0 !important; }
+		
+		.contact-temp-inner{
+			padding-top: 0px;
+			.grid-x{
+				justify-content: space-between;
+			}
+			.address-heading{
+				.entry-content{
+					@include breakpoint(large){ width: 35%; }
+					h1,h2,h3{
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+
+	p{
+
+		strong{
+			//color: white;
+			//font-size: 20px;
+			//line-height: 30px;
+
+		}
+	}
+
+	.gform_wrapper{
+		.gform_heading{
+			.gform_title{
+				padding-top: 0;
+				margin-top: 0;
+				font-size: 28px;
+			}
+		}
+		.gform_body{
+			ul.gform_fields{
+				li.gfield{
+					@include breakpoint(smedium down){ padding: 0 !important;}
+					a.terms-of-use{
+						&:hover, 
+						&:focus{
+							color: white !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.cell-contact-right{
+		background: white;
+		//padding: 2.5rem 2rem;
+	}
+	.entry-content{
+		text-align: left;
+
+	}
+	.cell-contact{
+		margin: 2rem 0;
+		@include breakpoint(xmedium){ margin: 0; }
+	}
+	iframe{
+		width: 100%;
+		@include breakpoint(large){ width: 80%; }
+	}
+	.footer{
+		position: relative;
+		background: transparent;
+	}
+}
+
+
+
+
+
+.page-template-template-contact{
+	.footer{
+		padding-top: 0;
+		.contact-footer-content{
+			margin: 2rem 0 1.5rem;
+		}
+	}
+}

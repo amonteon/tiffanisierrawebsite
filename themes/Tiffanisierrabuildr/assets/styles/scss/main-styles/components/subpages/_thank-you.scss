@@ -1,0 +1,30 @@
+.thank-you-wrapper{
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	min-height:800px; 
+	margin-bottom: 0 !important;
+	position: relative;
+	z-index: 10;
+	.grid-container{
+		position: relative;
+		z-index: 100;
+		//padding-top: 130px;
+		.inner-content{
+			min-height: 680px;
+		}
+		.page-title{
+			font-size: 100px;
+			color: white;
+			margin: 3rem 0;
+			.sub-heading{
+				font-size: 41px;
+				display: block;
+			}
+		}
+		.thank-you-content{
+			color: white;
+			font-weight: 100;
+			margin-bottom: 3rem;
+		}
+	}
+}

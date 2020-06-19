@@ -1,0 +1,192 @@
+/*********************
+BREAKPOINT GUIDE
+*********************/
+/*
+@include breakpoint(small) { } // 0px - 419px	
+@include breakpoint(xsmall) { } // 0px - 419px	
+@include breakpoint(smedium) { } //	420px - 639px 
+@include breakpoint(medium) { } // 640px - 768px	
+@include breakpoint(xmedium) { } // 769px - 1024px	
+@include breakpoint(large) { }	// 1025px - 1199px
+@include breakpoint(xlarge) { }	// 1200px - 1439px
+@include breakpoint(xxlarge) { } // 1440px - beyond	
+*/
+
+
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+	background-color: #272727;
+	color: $black;
+	clear: both;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 3rem;
+	.inner-footer{
+		position: relative;
+		//padding: 68px 0 28px;
+		//@include breakpoint(xmedium) { padding: 10rem 0 9rem; } 
+		//@at-root: 1600px;
+		p, h1, h2, h3, h4, h5, h6{
+			color: white;
+			&.button{
+				color: $primary-color; 
+				margin-bottom: 0 !important;
+				min-width: 270px; 
+				&:hover, 
+				&focus{
+					color: white; 
+				}
+			}
+		}
+		h2{
+			font-size: 42px;
+			color: #F2AD28;
+		}
+		a{
+			color: #F2AD28;
+		}
+		a:not(.button){
+			font-weight: 600;
+			display: inline-flex;
+			transition: background .3s ease-in-out;
+			margin: 0; 
+
+		}
+		li.social-items{
+			&:first-of-type{
+				a{
+					padding-left: 0;
+				}
+			}
+			a{
+				color: white;
+				
+			}
+		}
+		p{
+			strong{
+				text-transform: uppercase;
+				font-size: 18px;
+				color: white;
+				letter-spacing: 0.5px;
+			}
+			margin-bottom: 0.8rem;
+		}
+		.footer-title{
+			@include breakpoint(medium down){ text-align: center;}
+		}
+		.footer-left{
+			position: relative;
+			margin: 2rem 0;
+			@include breakpoint(xmedium){ margin: auto;}
+			@include breakpoint(medium down){ text-align: center;}
+		}
+		.footer-middle{
+			a.button{
+				@include breakpoint(xmedium only){ font-size: 15px; min-width: 220px;}
+			}
+			ul.socialLinks{
+				@include breakpoint(medium down){ justify-content: center;}
+			}
+			@include breakpoint(medium down){ margin-bottom: 2rem; text-align: center; }
+		}
+		.footer-right{
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			img{
+				object-fit: contain;
+			}
+			@include breakpoint(medium down){ text-align: center; margin-bottom: 2rem;}
+		}
+	}
+	.additional-footer {
+		margin: 0;
+		font-size: 14px;
+		position: relative;
+		padding: 1rem 0;
+		margin-top: 1rem;
+		align-items: center;
+		@include breakpoint(medium down){ text-align: center; margin-bottom: 2rem;}
+		h2, h3, h4 { color: $black;}
+		p{
+			font-size: 14px;
+			color: white;
+			position: relative;
+			z-index: 10;
+		}
+		a{
+			color: white;
+			font-weight: 600;
+			font-size: 14px;
+			//text-transform: uppercase;
+			text-decoration: none;
+			&:hover, 
+			&:focus{
+				color: $secondary-color;
+			}
+		}
+		.additional-footer-content{
+			width: 100%;
+			position: relative;
+			color: white;
+			a{
+				padding-left: 10px;
+				margin-bottom: 0;
+			}
+			p{
+				margin-bottom: 0;
+			}
+			img{
+				margin-right: 10px;
+				margin-top: -2px;
+			}
+		}
+	}
+
+}
+
+
+//----------------------------------------- FOOTER CONTACT -------------------------------------------------------------------//
+.page-template-template-contact .footer{
+	
+	&:before{
+		display: none;
+	}
+	.inner-footer{
+		margin: 4rem auto 0;	
+		padding: 0;
+	}
+	.additional-footer-custom{
+		.contact-footer-content{
+			font-size: 13px;
+			color: $body-font-color;
+			text-align: left;
+			img{
+				margin-right: 10px;
+				margin-top: -2px;
+			}
+			p{
+				font-size: 13px;
+				margin-bottom: 0;
+				line-height: 20px;
+				color: $body-font-color;
+			}
+			a{
+				font-weight: bold;
+				font-size: 13px;
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+

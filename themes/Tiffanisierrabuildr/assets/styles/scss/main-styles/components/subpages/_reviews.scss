@@ -1,0 +1,21 @@
+.page-template-template-reviews{
+	#content{
+		.inner-content{
+			padding-bottom: 0;
+		}
+	}
+	.reviews-btn{
+		border-radius: 51px;
+	}
+	.patient-name{
+		color: $primary-color;
+		font-size: 20px;
+		font-weight: 600;
+		display: block;
+		@include breakpoint(smedium down){ font-size: 16px;}
+		@include breakpoint(xmedium down){ padding: 1.5rem 0;}
+	}
+	.reviews-cell{
+		margin: .5rem 0;
+	}
+}

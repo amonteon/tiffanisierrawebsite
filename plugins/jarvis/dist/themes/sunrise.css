@@ -1,0 +1,53 @@
+/**
+ * jarvis -  Jarvis is your admin assistant, putting WordPress at your fingertips via a quicksearch interface.
+ * @version v1.0.4
+ * @link https://github.com/WDGDC/Jarvis#readme
+ * @license MIT
+ */
+
+.jarvis__overlay {
+  background-color: rgba(221, 130, 59, 0.6);
+}
+
+.jarvis__modal {
+  background-color: #b43c38;
+}
+
+.jarvis__menu {
+  background-color: #b43c38;
+}
+
+.jarvis__suggestion a {
+  color: #ffffff;
+}
+
+.jarvis__suggestion a:hover {
+  background-color: #e59e66;
+}
+
+.jarvis__cursor a {
+  background-color: #dd823b;
+}
+
+.jarvis__cursor a:hover {
+  background-color: #dd823b;
+}
+
+.jarvis__hint[type="text"] {
+  background-color: #e6e6e6 !important;
+  color: rgba(180, 60, 56, 0.4);
+}
+
+.jarvis__input[type="text"] {
+  color: #b43c38;
+}
+
+.jarvis__loading {
+  background-color: #dd823b;
+}
+
+.jarvis__loading::after {
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=sunrise.css.map */

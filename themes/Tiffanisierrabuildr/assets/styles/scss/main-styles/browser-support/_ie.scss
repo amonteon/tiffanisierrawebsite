@@ -1,0 +1,39 @@
+// All of IE versions
+
+/*********************
+IE WArning
+*********************/
+
+.ie-warning {
+	z-index: 999999;
+	width:100%;
+	height:100vh;
+	position: fixed;
+	background-color:black;
+	color:white;
+	.grid-x {
+		height:100vh;
+		width:100%;
+		text-align: center;
+	}
+	display: none;
+}
+
+
+html.ie {	
+	&.ie-10,
+	&.ie-9,
+	&.ie-8,
+	&.ie-7 {
+	.ie-warning { padding-top:20%; display: block; }	
+	}
+}
+/*
+
+.ie-11{
+	
+}
+*/
+
+
+

@@ -1,0 +1,254 @@
+/**
+ * jarvis -  Jarvis is your admin assistant, putting WordPress at your fingertips via a quicksearch interface.
+ * @version v1.0.4
+ * @link https://github.com/WDGDC/Jarvis#readme
+ * @license MIT
+ */
+
+@-webkit-keyframes jarvis-loading-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes jarvis-loading-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.jarvis__overlay {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100000;
+}
+
+.jarvis__modal {
+  border-radius: .5em;
+  box-sizing: border-box;
+  left: 50%;
+  max-width: 750px;
+  padding: 1em;
+  position: fixed;
+  top: 32px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 96%;
+  z-index: 100001;
+}
+
+.jarvis__wrap {
+  width: 100%;
+}
+
+.jarvis__search {
+  width: 100%;
+}
+
+.jarvis__hint, .jarvis__input {
+  border: none;
+  font-size: 2em;
+  padding: .5em;
+  width: 100%;
+}
+
+.jarvis__loading {
+  -webkit-animation: jarvis-loading-spin 1000ms linear infinite;
+          animation: jarvis-loading-spin 1000ms linear infinite;
+  border-radius: 50%;
+  height: 20px;
+  margin-top: -8px;
+  opacity: .7;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 20px;
+}
+
+.jarvis__loading::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.jarvis__menu {
+  border-radius: .5em;
+  padding: 1em;
+  margin: 0 -1em 0 -1em;
+  width: 100%;
+}
+
+.jarvis__menu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: .5em;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.jarvis__suggestion {
+  overflow: hidden;
+}
+
+.jarvis__suggestion a {
+  border-radius: .5em;
+}
+
+.jarvis__cursor a:hover {
+  border-color: #d1dae1;
+}
+
+.jarvis__icon {
+  background-size: 28px 28px;
+  box-sizing: border-box;
+  flex: none;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 8px;
+  text-align: left;
+  width: 28px;
+}
+
+.jarvis__icon svg,
+.jarvis__icon img {
+  height: 24px;
+  width: 24px;
+  margin: 2px;
+}
+
+.jarvis__icon svg path {
+  fill: currentColor;
+}
+
+.jarvis__icon.dashicons-before {
+  background: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.jarvis__icon.dashicons-before:before {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.jarvis__title {
+  display: block;
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.jarvis__pills {
+  display: block;
+  flex: none;
+  font-size: .8em;
+  opacity: .75;
+  pointer-events: none;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+}
+
+.jarvis__pill {
+  padding: 1px 3px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+input[name="jarvis_hotkey"] {
+  text-align: center;
+  max-width: 30px;
+}
+
+input[name="jarvis_hotkey"]:focus {
+  background-color: gray;
+  color: white;
+}
+
+input[name="jarvis_hotkey"]::-moz-selection {
+  background-color: transparent;
+}
+
+input[name="jarvis_hotkey"]::selection {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 782px) {
+  input[name="jarvis_hotkey"] {
+    width: auto;
+  }
+}
+
+#wpadminbar #wp-admin-bar-jarvis_menubar_icon {
+  display: block;
+}
+
+#wpadminbar #wp-admin-bar-jarvis_menubar_icon .ab-item {
+  text-align: center;
+}
+
+#wpadminbar #wp-admin-bar-jarvis_menubar_icon .ab-item span {
+  position: absolute;
+  top: -4em;
+  white-space: nowrap;
+}
+
+#wpadminbar #wp-admin-bar-jarvis_menubar_icon .ab-item::before {
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f179";
+  display: inline-block;
+  float: none;
+  font-family: dashicons;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  line-height: 1;
+  margin-right: 0;
+  text-align: center;
+  text-decoration: inherit;
+  vertical-align: -5px;
+  width: 20px;
+}
+
+@media screen and (max-width: 782px) {
+  #wpadminbar #wp-admin-bar-jarvis_menubar_icon .ab-item {
+    width: 46px;
+  }
+  #wpadminbar #wp-admin-bar-jarvis_menubar_icon .ab-item::before {
+    font-size: 32px;
+    height: 20px;
+    vertical-align: -10px;
+    width: 28px;
+  }
+}
+
+/*# sourceMappingURL=jarvis.css.map */
