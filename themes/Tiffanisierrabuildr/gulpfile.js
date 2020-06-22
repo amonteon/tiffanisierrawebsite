@@ -13,7 +13,7 @@ var gulp  = require('gulp'),
 // Modify these variables to match your project needs   
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'http://local.tiffanisierra.com/';
+const LOCAL_URL = 'http://www.tiffanisierrastaging.info//';
 
 
 

@@ -793,28 +793,29 @@ SIDEBARS & ASIDES
 		.breadcrumbs{
 			z-index: 10;
 			position: relative;
-			color: white;
+			color:#EF4C21;
 			border: none;
 			margin: 0;
 			padding: 2rem 0 0;
 			font-weight: bold;
 			span{
-				font-size: 13px;
+				font-size: 16px;
 				line-height: 30px;
 				font-family: $body-font-family;
 				font-weight: normal;
-				color: white;
+				color: #EF4C21;
 				opacity: 1;
 				padding: 0 .2rem;
 				&.current-item{
 					opacity: .7;
 					font-weight: bold;
-					color: white;
+					color: #EF4C21;
 				}
 				a{
-					color: white;
+					color: #EF4C21;
+					font-size: 16px;
 					span{
-						color: white;
+						color: #EF4C21;
 						font-weight: bold;
 						//margin-left: .5rem;
 					}

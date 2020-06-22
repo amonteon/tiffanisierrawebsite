@@ -97,7 +97,7 @@ $button-secondary-color-hover: $white;
 
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: usual, sans-serif;
+$body-font-family: "sofia-pro",sans-serif;
 $body-font-weight: 100;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -163,7 +163,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: usual, sans-serif;
+$header-font-family: "century-old-style-std",serif;
 $header-font-weight: 100;
 $header-font-style: normal;
 $font-family-monospace: $body-font-family;
@@ -181,7 +181,7 @@ $header-styles: (
     'h6': ('font-size': 25, 'line-height': 50px),
     'p, ul, ol, a , div.content': ('font-size': 14 , 'line-height': 20),
     'p.small': ('font-size':12.8,'line-height': 32),  
-    'a.button' : ('font-size': 18, 'line-height' :22), 
+    'a.button' : ('font-size': 14, 'line-height' :22), 
   ),
     xmedium: (
     'h1': ('font-size': 40, 'line-height': 40px),

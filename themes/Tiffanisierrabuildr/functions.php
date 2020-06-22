@@ -43,9 +43,6 @@ require_once(get_template_directory().'/functions/additional-mce-buttons.php');
 // Related post function - no need to rely on plugins
 // require_once(get_template_directory().'/functions/related-posts.php'); 
 
-// Use this as a template for custom post types
-require_once(get_template_directory().'/functions/custom-post-type.php');
-
 // Customize the WordPress login menu
 require_once(get_template_directory().'/functions/login.php'); 
 

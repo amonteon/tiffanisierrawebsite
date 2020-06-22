@@ -52,10 +52,7 @@ if ( $navigationType == 'offcanvas_curtain') { $navStyleClass = 'navStyleCurtain
 <section id="page-banner" class="<?=$navStyleClass;?>">
 <div class="banner-bg <?php if ($selectBanner === 'black') : ?> black-bg <?php elseif($selectBanner === 'pink'): ?> pink-bg <?php elseif($selectBanner === 'white'): ?> white-bg <?php endif;?>" <?php if ($dataInterchange):?>  style="background-size: cover; background-repeat: no-repeat;" data-interchange="<?=$dataInterchange?>" <?php endif;?>>
 		<div class="grid-container">
-			<?php $breadcrumbs_shortcode = get_field('breadcrumbs_shortcode','options'); 						
-			if($breadcrumbs_shortcode): ?>						
-				<?php get_template_part('parts/components/component', 'breadcrumbs'); ?>	
-			<?php endif; ?>
+
 			<div class="grid-x grid-padding-x align-middle align-center banner-content">
 				
 					<?php if(is_home()): ?>
@@ -72,10 +69,10 @@ if ( $navigationType == 'offcanvas_curtain') { $navStyleClass = 'navStyleCurtain
 						</div>
 					<?php  else:?>
 						<?php if($addImage): ?>
-							<div class="cell small-12 large-5 show-for-large">
+							<div class="cell small-12 large-6 show-for-large">
 							<img src="<?php echo $bannerImg['url']; ?>" alt="<?php echo $bannerImg['alt']; ?>" />
 							</div>
-							<div class="cell small-12 large-7 text-left header-w-img">
+							<div class="cell small-12 large-6 text-left header-w-img">
 								<h1 class="page-title">
 									<?php if($altTitle) { 
 										echo $altTitle ;
@@ -86,6 +83,10 @@ if ( $navigationType == 'offcanvas_curtain') { $navStyleClass = 'navStyleCurtain
 										echo'<small class="sub-header">' . $geoTag . '</small>';
 									}?>
 								</h1>
+								<?php $breadcrumbs_shortcode = get_field('breadcrumbs_shortcode','options'); 						
+								if($breadcrumbs_shortcode): ?>						
+									<?php get_template_part('parts/components/component', 'breadcrumbs'); ?>	
+								<?php endif; ?>
 							</div>
 							
 						<?php else: ?>
@@ -100,6 +101,10 @@ if ( $navigationType == 'offcanvas_curtain') { $navStyleClass = 'navStyleCurtain
 										echo'<small class="sub-header">' . $geoTag . '</small>';
 									}?>
 								</h1>
+								<?php $breadcrumbs_shortcode = get_field('breadcrumbs_shortcode','options'); 						
+								if($breadcrumbs_shortcode): ?>						
+									<?php get_template_part('parts/components/component', 'breadcrumbs'); ?>	
+								<?php endif; ?>
 							</div>
 
 						<?php endif; ?>

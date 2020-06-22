@@ -42,21 +42,16 @@ $selectBanner = get_field( 'select_type_of_banner', $post_id );
 <div data-sticky-container>
 <div class="<?=$class?> wait-js sticky-wrapper-navigation <?php if ($selectBanner === 'black') : ?> black-bg <?php elseif($selectBanner === 'pink'): ?> pink-bg <?php elseif($selectBanner === 'white'): ?> white-bg <?php endif;?> " data-sticky data-options="marginTop:0; stickyOn:small;" style="<?=$styles?> width:100%;">	
 		<div class="grid-container nav-container">
-			<div class="grid-x grid-padding-x align-middle align-center nav-grid">
-				<div class="cell auto large-shrink logo-container show-for-large">
-					<a href="<?php echo home_url(); ?>">
-						<img class="main-logo" data-interchange="[<?=$mobile_logo['url'];?>, small], [<?=$tablet_logo['url'];?>, medium], [<?=$logo['url'];?>, large]" height="<?=$logo['height'];?>" width="<?=$logo['width'];?>" alt="<?=$logo['alt'];?>"/ >
-						<img class="alt-logo"  data-interchange="[<?=$alt_logo['url'];?>, small], [<?=$alt_logo['url'];?>, medium], [<?=$alt_logo['url'];?>, large]" height="<?=$alt_logo['height'];?>" width="<?=$alt_logo['width'];?>" alt="<?=$alt_logo['alt'];?>"/ >
-					</a>
-				</div>		
+			<div class="grid-x grid-padding-x align-middle align-center nav-grid">	
 					<!-- TOP BAR -->
 					<div class="lower-bar wait-js" id="top-bar-menu">
 						<div class="grid-container">
 							<div class="grid-x align-middle">
 								
 								
-								<div class="cell auto large-shrink logo-container hide-for-large">
+								<div class="cell small-4 xsmall-auto large-3 logo-cell">
 									<a href="<?php echo home_url(); ?>">
+										<span class="site-title">Tiffani Sierra</span>
 										<img class="main-logo" data-interchange="[<?=$mobile_logo['url'];?>, small], [<?=$tablet_logo['url'];?>, medium], [<?=$logo['url'];?>, large]" height="<?=$logo['height'];?>" width="<?=$logo['width'];?>" alt="<?=$logo['alt'];?>"/ >
 										<img class="alt-logo"  data-interchange="[<?=$alt_logo['url'];?>, small], [<?=$alt_logo['url'];?>, medium], [<?=$alt_logo['url'];?>, large]" height="<?=$alt_logo['height'];?>" width="<?=$alt_logo['width'];?>" alt="<?=$alt_logo['alt'];?>"/ >
 									</a>

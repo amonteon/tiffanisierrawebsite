@@ -61,7 +61,8 @@ $sticky-navigation-height-large-fixed: 128px;
 			color: white;
 		}
 		a.button{
-			margin-top: 3rem;
+			margin-top: 1rem;
+			//@include breakpoint(xmedium) { margin-top: 3rem; }
 		}
 		a:not(.button) {	
 			font-size:16px; 
@@ -126,9 +127,10 @@ $sticky-navigation-height-large-fixed: 128px;
 			color: white;
 			font-weight: 600;
 			width: 100%;
+			font-family: $header-font-family;
 			@include breakpoint(medium down){
-				padding: 1.5rem;
-				margin: 0.8rem 0;;
+				padding: 1rem;
+				margin: 0.3rem 0;
 			}
 			@include breakpoint(xmedium){
 				background-color: transparent !important;
@@ -159,6 +161,7 @@ $sticky-navigation-height-large-fixed: 128px;
 		}
 	}
 	.next-section-arrow{
+		@include breakpoint(medium down){ display: none; }
 		i{
 			font-size: 30px;
 			font-family: "Font Awesome 5 Pro";
@@ -175,9 +178,10 @@ $sticky-navigation-height-large-fixed: 128px;
 		font-size:73px; 
 		margin-top: $sticky-navigation-height;
 		margin: 2rem 0; 
-		line-height: 40px;
+		line-height: 64px;
 		text-transform: capitalize;
-		font-weight: bold;
+		font-weight: regular;
+		font-family: "mojito",sans-serif;
 		//text-shadow: 0px 0px 10px rgba(0,0,0,.6);
 		@include breakpoint(medium ) { font-size:80px;} // 640px - 768px	
 		@include breakpoint(xmedium) { font-size:116px;} // 769px - 1024px	

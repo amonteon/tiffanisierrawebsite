@@ -97,16 +97,16 @@
 			<div class="static-banner-wrapper banner-wrapper <?=$parallaxType?>" data-speed="0.2" <?php if($dataInterchange):?> data-interchange="<?=$dataInterchange?>" <?php endif; ?> alt="<?=$thealt[1]?>">		
 			</div>
 			<div class="grid-x grid-padding-x tagline align-middle align-left text-left" >
-				<div class="cell small-8 medium-7 large-9">
+				<div class="cell small-9 medium-7 large-9">
 					<?php if($tagline): echo $tagline; endif; ?>
 				</div>
-				<div class="cell small-8 medium-7 large-8">
+				<div class="cell small-9 medium-7 large-8">
 					<?php if ( have_rows( 'subheader_bullet_points' ) ) : ?>
 						<div class="grid-x subheading-wrapper">
 							<?php while ( have_rows( 'subheader_bullet_points' ) ) : the_row(); ?>
 								<?php if ( have_rows( 'bullet_points' ) ) : ?>
 									<?php while ( have_rows( 'bullet_points' ) ) : the_row(); ?>
-										<div class="cell small-8 subheading-item" style="background-color:<?php the_sub_field( 'mobile_background_color' ); ?>">
+										<div class="cell small-9 xmedium-8 subheading-item" style="background-color:<?php the_sub_field( 'mobile_background_color' ); ?>90;">
 											<?php the_sub_field( 'bullet_point_title' ); ?>
 										</div>
 									<?php endwhile; ?>

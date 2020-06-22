@@ -25,6 +25,9 @@ BREAKPOINT GUIDE
 .black-bg{
 	background: #151515 !important;
 	background-color: #151515 !important;
+	.navigation-bar a{
+		color: white !important;
+	}
 }
 .white-bg{
 	background: white !important;
@@ -37,6 +40,7 @@ BREAKPOINT GUIDE
 	line-height: 29px;
 	margin: 1rem auto;
 	display: block;
+	
 }
 #myBtn {
   display: block; /* Hidden by default */

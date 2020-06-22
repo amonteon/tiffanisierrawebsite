@@ -1,3 +1,24 @@
+.page-template-template-contact{
+	h1{
+		color: #F2AD28 !important;
+		font-family: "mojito",sans-serif;
+		font-size: 70px;
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			background: rgba(#F2AD28, 0.36);
+			width: 50%;
+			height: 50%;
+			bottom: 0;
+			left: 0;
+			display: block;
+		}
+	}
+	section#page-banner .banner-content{
+		min-height: 350px;
+	}
+}
 #content.contact-content{
 	//padding-top: 130px;
 	padding-bottom: 30px;
@@ -75,6 +96,12 @@
 	.cell-contact-right{
 		background: white;
 		//padding: 2.5rem 2rem;
+	}
+	.cell-contact-left{
+		img{
+			width: auto;
+			margin-top: 2rem;
+		}
 	}
 	.entry-content{
 		text-align: left;

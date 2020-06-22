@@ -63,7 +63,7 @@
 ?>	
 
 <div class="<?=$container_attr?>">
-	<div class="grid-x <?=$grid_attr?>">
+	<div class="grid-x">
 		<div class="cell <?=$cell_attr?>">
 			<?php echo do_shortcode($breadcrumbs_shortcode); ?>
 		</div>

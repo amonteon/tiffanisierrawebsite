@@ -28,7 +28,7 @@
 	<div class="grid-y" style="height:100%">
 		<div class="auto cell middle-cell">	
 			<div class="off-cv-wrapper"> 
-				<?php joints_curtain_nav(); ?>
+				<?php joints_top_nav(); ?>
 			</div>
 		</div>
 		

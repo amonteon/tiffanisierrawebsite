@@ -64,6 +64,14 @@ $font-size-medium:40px;
 /****************
 NAVIGATION - STATIC
 *****************/
+.logo-cell{
+	@include breakpoint(xmedium down) { margin-right: 2rem;}
+	.site-title{
+		font-size: 25px;
+		font-family: "mojito",sans-serif;
+		@include breakpoint(large){font-size: 45px;}
+	}
+}
 
 .home{
 	.sticky-wrapper-navigation.is-anchored{
@@ -253,7 +261,7 @@ body:not(.home){
 		
 		// Default Style Ref. nav-offcanvas-topbar.php
 		.mobile-hamburger-container.default {
-			margin-left: 2rem;
+			margin-left: 1rem;
 			.hamburger {
 				background-color: rgba(#F2AD28, 0.36);
 				height: 60px;
@@ -587,6 +595,7 @@ $phone-font-color-fixed: #5C5C5C;
 .sticky-wrapper-navigation.is-anchored { 
 	box-shadow: none;
 	background: white;
+	max-width: 100% !important;
 	.upper-bar {
 		@include transition(all .45s ease-in-out);
 		background-color:$upperbar-bg-color-fixed;
@@ -730,16 +739,10 @@ $subsubmenu-border-color:#c4c4c4;
 $subsubmenu-font-color:white;
 $subsubmenu-font-color-hover:$primary-color;
 
-body.offCanvasOpen{
-	position: fixed;
-	overflow: hidden;
-}
 
 #off-canvas {
 	height:100%;	
 	padding-bottom: 1.5rem;
-	//background: black;
-	//overflow-x: hidden;
 	z-index: 200;
 	&.is-open{
 		width: 100%;
@@ -751,29 +754,19 @@ body.offCanvasOpen{
 	}
 	
 	.off-cv-wrapper{
-		//overflow-y: scroll;
 		height: 100%;
 		position: relative;
-		//overflow-x: hidden;
 	}
-	.is-drilldown-submenu-parent>a:after{
-		border: none;
-	}
+
 	.middle-cell {
-		//background: black;
-		overflow: hidden;
-		padding-top: 150px;
+		padding-top: 100px;
 		.off-cv-wrapper{ 
-			.is-drilldown{
-				height: 100%;
-			}
-			ul.menu.vertical {
-				overflow-x: hidden;
+			ul.menu {
 				height: inherit;
 				li {
 					border-bottom: none;
-					//background-color:$menu-bg-color;
 					background: transparent;
+					width: 100%;
 					&:hover,
 					&:focus {		
 						a{
